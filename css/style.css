@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600&display=swap');
+
+:root {
+    --btn-back: linear-gradient(140deg, rgba(52,226,199,1) 0%, rgba(73,159,223,1) 50%);
+    --back-gradient: linear-gradient(140deg, rgba(53,31,120,1) 5%, rgba(167,66,139,1) 88%);
+  }
+
+* {
+    
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: var(--back-gradient) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    overflow: hidden;
+}
+
+h1 {
+    color: rgb(247, 247, 247);
+    font-size: 2.5em;
+}
+h2 {
+    color: rgb(211, 211, 211);
+    font-weight: 300;
+    font-size:large;
+}
+h3 {
+    color:white;
+    font-size: 1.5em;
+    font-weight: 500;
+    
+}
+h4 {
+    color: white;
+    font-size: 1em;
+    font-weight: 400;
+    }
+
+
+.dot1 {
+    margin-top: 60vh;
+    margin-left: 10vw;
+
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    background: rgb(218,57,250);
+    background: linear-gradient(140deg, rgba(218,57,250,1) 27%, rgba(255,180,199,1) 72%);
+    opacity: 0.78;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot2 {
+    margin-top: 10vh;
+    margin-left: 78vw;
+
+    position: absolute;
+    height: 540px;
+    width: 540px;
+    background: rgb(218,57,250);
+    background: linear-gradient(140deg, rgba(218,57,250,1) 27%, rgba(255,180,199,1) 72%);
+    opacity: 0.78;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.card1 {
+    margin-top: 24vh;
+    margin-left: 60vw;
+
+    position: absolute;
+    height: 300px;
+    width: 460px;
+    background: rgba(255, 255, 255, 0.26);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px);
+    border: 2.5px solid #e7a6f1a6;
+    display: inline-block;
+    transform: rotate(10deg);
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAV1JREFUKFM1kD1PwlAUhs/ph9Sa6ORSB3TXib/Bpp2FgdvBNrG/gNNRJxJYuIs4UybjL/HjDxAIEqohINKr9JiLcX/e533PQd+/2En7A8XIkFBiTadT5/XlZX18cmzd9XprYAAishAQoXZZc5afy9Kg358zIgZCWFmWFadnpzibZabKcxMBEIRo2J7nbSihgppkAKKRzWZmu93JARkQNAUIQSAOZFfOL/xzM+2nG9Y1wBxFUQmAYTJ5Yw1v+Si8KuVKFVLKb0rIoGZS/OEMvu/vIAJCI2jYsiu/4zjebbVaX0RNi5r086/RIj3cff94z5nBTNNU6bp2p5NXq1X38eFhpReKoGHrjVrKyKyDRhhG9mK52L2/682v49gZDodqkA42GEbhvuvu8e3tzUKT9VrNKZfLKkmo2P4wIWM0Hjvatj1GCGEfeR4/PT+xypVbqVQ+x6OR05VyVa/XD38BVG+oiL2S9KgAAAAASUVORK5CYII=
+    )
+}
+
+.cardInfo {
+ margin: 8%;
+ margin-top: 13%;
+}
+.cardName {
+    margin-top: -40px;
+    float: left;
+
+}
+.cardDate {
+    margin-top: -40px;
+    float: right;
+
+}
+
+
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1.8fr 0.7fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". ."
+      "Content Card"
+      ". .";
+}
+
+.Content {
+    grid-area: Content;
+    margin-left: 16vw;
+}
+.Content > .divParagraph {
+    margin-top:7vh;
+    margin-bottom: 10vh;
+}
+
+.divTitle {
+    max-width: 30vw;
+    margin-bottom:50px;
+}
+.divParagraph { 
+    max-width: 19vw;
+}
+    
+
+.Card { grid-area: Card; }
+
+
+
+
+form {
+    display:flex;
+    flex-direction:row;
+
+    padding: 8px;
+    max-width: 30vw;    
+
+  
+    background: rgba(255, 255, 255, 0.26);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+input {
+  flex-grow:2;
+  border:none;
+  background-color: transparent;
+  font-size:medium;
+  color:white;
+
+
+  
+}
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+    font-size:medium;
+    color: white;
+}
+
+button {
+    border:1px solid var(--btn-back);
+    border-radius: 10px;
+    background: var(--btn-back);
+    background: var(--btn-back);
+    color:white;
+    padding: 12px 8px 12px 8px;
+    width:100px;
+
+    font-size: 1.05em;
+    
+}
+
+button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
